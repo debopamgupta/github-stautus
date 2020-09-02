@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Github Status</title>
+  </head>
+  <body>
+    <h1>Github Status</h1>
+    <img src="./loading.gif" alt="loading" id="loading" />
+    <h3 class="message" id="description"></h3>
+    <div id="wrapper">
+      <div class="stat-div">
+        <div>Git Operations</div>
+        <div class="status" id="gitopsStatus"></div>
+      </div>
+      <div class="stat-div">
+        <div>API Requests</div>
+        <div class="status" id="apireqStatus"></div>
+      </div>
+      <div class="stat-div">
+        <div>Webhooks</div>
+        <div class="status" id="webhooksStatus"></div>
+      </div>
+      <div class="stat-div">
+        <div>Issues, PRs, Projects</div>
+        <div class="status" id="issuesStatus"></div>
+      </div>
+      <div class="stat-div">
+        <div>Github Actions</div>
+        <div class="status" id="actionsStatus"></div>
+      </div>
+      <div class="stat-div">
+        <div>GitHub Packages</div>
+        <div class="status" id="packagesStatus"></div>
+      </div>
+      <div class="stat-div">
+        <div>GitHub Pages</div>
+        <div class="status" id="pagesStatus"></div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+    <footer>
+      Made with <span>💙</span> by
+      <a href="https://github.com/debopamgupta">Debopam Gupta</a>
+    </footer>
+  </body>
+</html>

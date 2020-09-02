@@ -1,0 +1,37 @@
+body {
+  text-align: center;
+  font-size: 2.5rem;
+  background-color: white;
+}
+.message {
+  font-weight: bold;
+  color: rgb(223, 148, 72);
+}
+.stat-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  margin: 10rem;
+  border-radius: 1rem;
+  border: 2px solid rgba(66, 66, 66, 0.585);
+  margin: 2rem;
+}
+
+.status {
+  color: rgb(25, 104, 194);
+  font-weight: bold;
+}
+
+footer {
+  font-size: 0.7em;
+}
+a {
+  text-decoration: underline;
+  color: rgb(255, 113, 47);
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    font-size: 1.7rem;
+  }
+} ;
