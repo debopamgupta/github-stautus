@@ -13,3 +13,7 @@ For the client, plain HTML, CSS ( [Milligram CSS](https://milligram.io) ), JavaS
 Well the server is more like _serverless_, but it may be modified to be used with [express](https://expressjs.com) or similar.
 
 In the server, I am using [Vercel Serverless functions](https://vercel.com/docs/serverless-functions/introduction) and that;s probably why one might find it confusing as to what is happening in the server.
+
+https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/GitHub-Status-App.md
+
+Here was where i got the idea from!!
