@@ -1,10 +1,32 @@
+const wrapper = document.getElementById("wrapper");
 wrapper.style.display = "none";
-// use vercel dev to spin up the serverless function
+
 const API_URL =
   window.location.hostname === "localhost" ||
   window.location.hostname === "127.0.0.1"
     ? "http://localhost:3000/api/status"
     : "https://ghstatusfn.vercel.app/api/status";
+
+function createStatusElement(status) {
+  {
+    if (status.name.toLowerCase().startsWith("visit")) return; // weird extra link element
+
+    const holderDiv = document.createElement("div");
+    holderDiv.classList.add("stat-div");
+
+    const titleDiv = document.createElement("div");
+    titleDiv.textContent = status.name;
+
+    const statusDiv = document.createElement("div");
+    statusDiv.textContent = status.status;
+    statusDiv.classList.add("status");
+
+    holderDiv.appendChild(titleDiv);
+    holderDiv.appendChild(statusDiv);
+
+    wrapper.appendChild(holderDiv);
+  }
+}
 
 function getData() {
   fetch(API_URL)
@@ -14,33 +36,11 @@ function getData() {
       wrapper.style.display = "";
       description.textContent = json.description;
       const statuses = json.components;
-      for (let i = 0; i < 8; i++) {
-        switch (i) {
-          case 0:
-            gitopsStatus.textContent = statuses[i].status;
-            break;
-          case 1:
-            apireqStatus.textContent = statuses[i].status;
-            break;
-          case 2:
-            webhooksStatus.textContent = statuses[i].status;
-            break;
-          case 4:
-            issuesStatus.textContent = statuses[i].status;
-            break;
-          case 5:
-            actionsStatus.textContent = statuses[i].status;
-            break;
-          case 6:
-            packagesStatus.textContent = statuses[i].status;
-            break;
-          case 7:
-            pagesStatus.textContent = statuses[i].status;
-            break;
-          default:
-            break;
-        }
-      }
+
+      statuses.forEach((status) => {
+        console.log(status);
+        createStatusElement(status);
+      });
     });
 }
 getData();

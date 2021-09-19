@@ -9,17 +9,17 @@ body h1 {
 
 body {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   background-color: rgb(250, 250, 250);
 }
 .message {
   font-weight: bold;
-  color: rgb(223, 148, 72);
+  color: rgb(70, 128, 255);
 }
 .stat-div {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 1rem;
   border: 1px solid rgba(132, 132, 132, 0.585);
   margin: 1rem 1rem;
