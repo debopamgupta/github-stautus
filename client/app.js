@@ -1,7 +1,8 @@
 wrapper.style.display = "none";
 // use vercel dev to spin up the serverless function
 const API_URL =
-  window.location.hostname === "localhost"
+  window.location.hostname === "localhost" ||
+  window.location.hostname === "127.0.0.1"
     ? "http://localhost:3000/api/status"
     : "https://ghstatusfn.vercel.app/api/status";
 

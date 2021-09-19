@@ -2,10 +2,15 @@
 * {
   font-family: Inter, sans-serif !important;
 }
+
+body h1 {
+  font-weight: bold;
+}
+
 body {
   text-align: center;
   font-size: 2.5rem;
-  background-color: white;
+  background-color: rgb(250, 250, 250);
 }
 .message {
   font-weight: bold;
